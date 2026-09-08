@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Hygiene Habits - Quiz Kelas 6</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+    h1, h2, h3, .font-heading {
+      font-family: 'Fredoka', cursive, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 min-h-screen text-slate-800 pb-12">
+
+  <!-- Header Banner -->
+  <header class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white py-8 shadow-md">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="inline-block bg-teal-400/40 text-xs md:text-sm uppercase tracking-wider font-bold py-1 px-3 rounded-full mb-2 border border-white/20">
+        Bahasa Inggris Kelas 6 SD • Unit: Our Hygiene Habits
+      </span>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-wide drop-shadow-sm">
+        🧼 Our Hygiene Habits Quiz 🪥
+      </h1>
+      <p class="mt-2 text-teal-100 text-sm md:text-base">
+        Mempraktikkan Tata Cara Menjaga Kebersihan Diri Sehari-hari • 10 Soal (Skor Maksimal: 100)
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 mt-8 space-y-8">
+
+    <!-- Vocabulary Reference Card -->
+    <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <div class="flex items-center justify-between border-b pb-4 mb-4">
+        <div>
+          <h2 class="text-xl font-bold text-teal-700 flex items-center gap-2">
+            📖 Vocabulary Box (Kamus Kosakata)
+          </h2>
+          <p class="text-xs md:text-sm text-slate-500">Pelajari kosakata kunci ini sebelum memulai kuis!</p>
+        </div>
+        <button id="toggleVocabBtn" class="text-xs bg-teal-50 text-teal-700 hover:bg-teal-100 font-bold px-3 py-1.5 rounded-lg transition">
+          Sembunyikan / Tampilkan
+        </button>
+      </div>
+
+      <div id="vocabContent" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Brush teeth</p>
+          <p class="text-slate-600 text-xs">Menggosok / menyikat gigi</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Take a bath / shower</p>
+          <p class="text-slate-600 text-xs">Mandi</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Wash hands</p>
+          <p class="text-slate-600 text-xs">Mencuci tangan</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Cut / trim nails</p>
+          <p class="text-slate-600 text-xs">Memotong kuku</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Wash hair / Shampoo</p>
+          <p class="text-slate-600 text-xs">Keramas rambut</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Comb hair</p>
+          <p class="text-slate-600 text-xs">Menyisir rambut</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Soap & Towel</p>
+          <p class="text-slate-600 text-xs">Sabun & Handuk</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Toothbrush & Paste</p>
+          <p class="text-slate-600 text-xs">Sikat & Pasta gigi</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Nail clippers</p>
+          <p class="text-slate-600 text-xs">Gunting kuku</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Clean clothes</p>
+          <p class="text-slate-600 text-xs">Pakaian bersih</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Twice a day</p>
+          <p class="text-slate-600 text-xs">Dua kali sehari</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Before & After eating</p>
+          <p class="text-slate-600 text-xs">Sebelum & sesudah makan</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Cover mouth & nose</p>
+          <p class="text-slate-600 text-xs">Menutup mulut & hidung saat bersin/batuk</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Wash feet</p>
+          <p class="text-slate-600 text-xs">Mencuci kaki sebelum tidur</p>
+        </div>
+        <div class="p-2.5 bg-teal-50/70 rounded-xl border border-teal-100">
+          <p class="font-bold text-teal-900">Germs & Bacteria</p>
+          <p class="text-slate-600 text-xs">Kuman & Bakteri penyebab sakit</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Information Card -->
+    <section class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+        👤 Identitas Siswa
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-1" for="studentName">Nama Lengkap:</label>
+          <input type="text" id="studentName" placeholder="Contoh: Budi Santoso" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm">
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-1" for="studentClass">Kelas:</label>
+          <select id="studentClass" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm">
+            <option value="">-- Pilih Kelas --</option>
+            <option value="6A">Kelas 6A</option>
+            <option value="6B">Kelas 6B</option>
+            <option value="6C">Kelas 6C</option>
+            <option value="6D">Kelas 6D</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Question Container -->
+    <form id="quizForm" class="space-y-6">
+      <div id="questionsContainer" class="space-y-6">
+        <!-- Soal akan di-render secara dinamis oleh JavaScript -->
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex flex-col items-center justify-center pt-4">
+        <button type="button" id="submitQuizBtn" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 px-8 rounded-xl shadow-md transition transform hover:-translate-y-0.5 w-full md:w-auto text-base">
+          ✨ Kirim & Simpan Nilai ke Spreadsheet
+        </button>
+        <p id="validationWarning" class="text-rose-600 text-sm mt-3 hidden font-semibold">
+          ⚠️ Mohon lengkapi nama, kelas, dan jawab semua pertanyaan kuis sebelum mengirim!
+        </p>
+      </div>
+    </form>
+
+    <!-- Result / Status Modal Modal -->
+    <div id="resultCard" class="hidden bg-white rounded-2xl p-6 shadow-lg border-2 border-teal-500 text-center transition-all">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-100 text-teal-600 text-3xl mb-3">
+        🎉
+      </div>
+      <h3 class="text-2xl font-bold text-slate-800 font-heading">Hasil Kuis Selesai!</h3>
+      <p class="text-slate-600 text-sm mt-1" id="resultGreeting"></p>
+
+      <div class="my-6 inline-block bg-teal-50 rounded-2xl px-8 py-4 border border-teal-200">
+        <span class="text-xs uppercase text-teal-700 font-bold tracking-wider block">Nilai Akhir Anda</span>
+        <span class="text-5xl font-extrabold text-teal-600" id="finalScoreDisplay">0</span>
+        <span class="text-xs text-slate-500 block mt-1" id="correctRatioDisplay">0 dari 10 benar</span>
+      </div>
+
+      <div id="statusMessage" class="text-sm font-semibold text-slate-600 mb-4">
+        Sedang menyimpan nilai ke Google Sheets...
+      </div>
+
+      <div class="flex justify-center gap-3">
+        <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); location.reload();" class="px-5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg text-sm transition">
+          Ulangi Kuis
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="mt-16 border-t border-slate-200/80 py-6 text-slate-400">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between text-xs">
+      <p class="select-none">
+        © Hygiene Habits Quiz • Bahasa Inggris Kelas 6 SD
+      </p>
+      
+      <!-- Tombol Akses Guru yang Sangat Halus dan Tidak Mencolok -->
+      <button 
+        type="button" 
+        id="openTeacherModalBtn" 
+        class="inline-flex items-center gap-1.5 text-slate-300 hover:text-slate-500 transition-colors p-1.5 rounded focus:outline-none" 
+        title="Pengaturan Guru"
+      >
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+        <span class="text-[11px] opacity-70">Akses Guru</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Teacher Settings Modal -->
+  <div id="teacherModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-md rounded-2xl shadow-xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- Header Modal -->
+      <div class="bg-slate-800 text-white px-5 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-base">🔐</span>
+          <h3 class="font-bold text-sm tracking-wide">Panel Integrasi Guru</h3>
+        </div>
+        <button type="button" id="closeTeacherModalBtn" class="text-slate-400 hover:text-white text-lg font-bold">
+          &times;
+        </button>
+      </div>
+
+      <!-- Step 1: Login Form (PIN) -->
+      <div id="teacherAuthSection" class="p-6 space-y-4">
+        <p class="text-xs text-slate-600">
+          Masukkan PIN Guru untuk mengonfigurasi tautan perekaman spreadsheet nilai.
+        </p>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1" for="teacherPinInput">PIN Keamanan:</label>
+          <input 
+            type="password" 
+            id="teacherPinInput" 
+            maxlength="10" 
+            placeholder="Ketik PIN di sini..." 
+            class="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 tracking-widest text-center font-mono font-bold"
+          >
+          <p id="pinErrorMsg" class="text-rose-600 text-xs font-semibold mt-1.5 hidden">
+            ⚠️ PIN salah. Silakan coba lagi!
+          </p>
+        </div>
+        
+        <div class="pt-2 flex justify-between items-center text-xs text-slate-400">
+          <span class="italic text-[11px]">PIN Default: <strong class="text-slate-600">1234</strong></span>
+          <button type="button" id="submitPinBtn" class="bg-slate-800 hover:bg-slate-900 text-white font-bold px-4 py-2 rounded-xl transition">
+            Buka Panel
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Settings Panel (After Login) -->
+      <div id="teacherConfigSection" class="p-6 space-y-5 hidden">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div>
+            <span class="text-xs font-bold text-slate-700 block">Status Koneksi Spreadsheet:</span>
+            <span id="modalStatusBadge" class="text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-semibold border border-amber-300 inline-block mt-0.5">
+              Belum Diatur
+            </span>
+          </div>
+          <button type="button" id="teacherLogoutBtn" class="text-xs text-rose-600 hover:text-rose-700 font-semibold underline">
+            Kunci Keluar
+          </button>
+        </div>
+
+        <div class="space-y-2">
+          <label for="scriptUrlInput" class="block text-xs font-bold text-slate-700">
+            Web App URL Google Apps Script:
+          </label>
+          <input 
+            type="text" 
+            id="scriptUrlInput" 
+            placeholder="https://script.google.com/macros/s/.../exec" 
+            class="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono"
+          >
+          <p class="text-[11px] text-slate-500 leading-relaxed">
+            Tempelkan URL Web App (berakhiran <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-700">/exec</code>) dari menu <i>Deploy &gt; Web app</i> spreadsheet Anda.
+          </p>
+        </div>
+
+        <div class="border-t border-slate-100 pt-3">
+          <label for="newPinInput" class="block text-xs font-semibold text-slate-600 mb-1">
+            Ganti PIN Guru (Opsional):
+          </label>
+          <input 
+            type="password" 
+            id="newPinInput" 
+            placeholder="Kosongkan jika tetap 1234" 
+            class="w-full px-3 py-1.5 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-1 focus:ring-teal-500"
+          >
+        </div>
+
+        <p id="saveNoticeMsg" class="text-xs font-semibold hidden"></p>
+
+        <div class="flex justify-end gap-2 pt-2">
+          <button type="button" id="saveTeacherConfigBtn" class="bg-teal-600 hover:bg-teal-700 text-white font-bold px-4 py-2 text-xs rounded-xl transition shadow">
+            Simpan Konfigurasi
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // KONFIGURASI GOOGLE APPS SCRIPT URL
+    // Diatur melalui Panel Guru di bagian footer
+    // ==========================================
+    const DEFAULT_SCRIPT_URL = "";
+    const DEFAULT_TEACHER_PIN = "1234";
+
+    // Helper untuk validasi URL
+    function isValidScriptUrl(url) {
+      if (!url || typeof url !== 'string') return false;
+      const cleanUrl = url.trim();
+      if (!cleanUrl.startsWith("https://script.google.com/macros/s/")) return false;
+      try {
+        new URL(cleanUrl);
+        return true;
+      } catch (_) {
+        return false;
+      }
+    }
+
+    // Ambil URL yang tersimpan di localStorage atau default
+    function getActiveScriptUrl() {
+      const stored = localStorage.getItem('HYGIENE_QUIZ_APPSCRIPT_URL');
+      if (isValidScriptUrl(stored)) return stored.trim();
+      if (isValidScriptUrl(DEFAULT_SCRIPT_URL)) return DEFAULT_SCRIPT_URL.trim();
+      return "";
+    }
+
+    function getTeacherPin() {
+      return localStorage.getItem('HYGIENE_QUIZ_TEACHER_PIN') || DEFAULT_TEACHER_PIN;
+    }
+
+    // Manajemen Modal Akses Guru
+    const teacherModal = document.getElementById('teacherModal');
+    const openTeacherModalBtn = document.getElementById('openTeacherModalBtn');
+    const closeTeacherModalBtn = document.getElementById('closeTeacherModalBtn');
+    const teacherAuthSection = document.getElementById('teacherAuthSection');
+    const teacherConfigSection = document.getElementById('teacherConfigSection');
+    const teacherPinInput = document.getElementById('teacherPinInput');
+    const pinErrorMsg = document.getElementById('pinErrorMsg');
+    const submitPinBtn = document.getElementById('submitPinBtn');
+    const modalStatusBadge = document.getElementById('modalStatusBadge');
+    const scriptUrlInput = document.getElementById('scriptUrlInput');
+    const newPinInput = document.getElementById('newPinInput');
+    const saveTeacherConfigBtn = document.getElementById('saveTeacherConfigBtn');
+    const saveNoticeMsg = document.getElementById('saveNoticeMsg');
+    const teacherLogoutBtn = document.getElementById('teacherLogoutBtn');
+
+    let isTeacherAuthenticated = false;
+
+    function refreshTeacherModalUI() {
+      const currentUrl = getActiveScriptUrl();
+      if (currentUrl) {
+        scriptUrlInput.value = currentUrl;
+        modalStatusBadge.textContent = "✅ Terhubung ke Spreadsheet";
+        modalStatusBadge.className = "text-[11px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-semibold border border-emerald-300 inline-block mt-0.5";
+      } else {
+        scriptUrlInput.value = "";
+        modalStatusBadge.textContent = "⚠️ Belum Ada URL Terhubung";
+        modalStatusBadge.className = "text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-semibold border border-amber-300 inline-block mt-0.5";
+      }
+    }
+
+    openTeacherModalBtn.addEventListener('click', () => {
+      teacherModal.classList.remove('hidden');
+      if (!isTeacherAuthenticated) {
+        teacherAuthSection.classList.remove('hidden');
+        teacherConfigSection.classList.add('hidden');
+        teacherPinInput.value = "";
+        pinErrorMsg.classList.add('hidden');
+        teacherPinInput.focus();
+      } else {
+        teacherAuthSection.classList.add('hidden');
+        teacherConfigSection.classList.remove('hidden');
+        refreshTeacherModalUI();
+      }
+    });
+
+    closeTeacherModalBtn.addEventListener('click', () => {
+      teacherModal.classList.add('hidden');
+    });
+
+    teacherModal.addEventListener('click', (e) => {
+      if (e.target === teacherModal) {
+        teacherModal.classList.add('hidden');
+      }
+    });
+
+    submitPinBtn.addEventListener('click', () => {
+      const enteredPin = teacherPinInput.value.trim();
+      if (enteredPin === getTeacherPin()) {
+        isTeacherAuthenticated = true;
+        pinErrorMsg.classList.add('hidden');
+        teacherAuthSection.classList.add('hidden');
+        teacherConfigSection.classList.remove('hidden');
+        refreshTeacherModalUI();
+      } else {
+        pinErrorMsg.classList.remove('hidden');
+        teacherPinInput.select();
+      }
+    });
+
+    teacherPinInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') submitPinBtn.click();
+    });
+
+    teacherLogoutBtn.addEventListener('click', () => {
+      isTeacherAuthenticated = false;
+      teacherConfigSection.classList.add('hidden');
+      teacherAuthSection.classList.remove('hidden');
+      teacherPinInput.value = "";
+    });
+
+    saveTeacherConfigBtn.addEventListener('click', () => {
+      const inputVal = scriptUrlInput.value.trim();
+      const newPinVal = newPinInput.value.trim();
+
+      if (inputVal && !isValidScriptUrl(inputVal)) {
+        saveNoticeMsg.className = "text-xs font-semibold text-rose-600 block";
+        saveNoticeMsg.textContent = "⚠️ Format URL salah. Wajib diawali https://script.google.com/macros/s/ dan diakhiri /exec";
+        return;
+      }
+
+      if (inputVal) {
+        localStorage.setItem('HYGIENE_QUIZ_APPSCRIPT_URL', inputVal);
+      } else {
+        localStorage.removeItem('HYGIENE_QUIZ_APPSCRIPT_URL');
+      }
+
+      if (newPinVal) {
+        localStorage.setItem('HYGIENE_QUIZ_TEACHER_PIN', newPinVal);
+        newPinInput.value = "";
+      }
+
+      refreshTeacherModalUI();
+      saveNoticeMsg.className = "text-xs font-semibold text-emerald-600 block";
+      saveNoticeMsg.textContent = "✓ Konfigurasi berhasil disimpan!";
+      setTimeout(() => {
+        saveNoticeMsg.classList.add('hidden');
+      }, 3000);
+    });
+
+    // Daftar 10 Soal Kuis Kelas 6 (Skor Maksimal 100: 10 poin per nomor)
+    const quizData = [
+      {
+        id: 1,
+        question: "How often should we brush our teeth every day to maintain healthy teeth?",
+        translation: "(Seberapa sering kita harus menyikat gigi setiap hari untuk menjaga gigi tetap sehat?)",
+        options: [
+          { text: "Once a month", isCorrect: false },
+          { text: "Twice a day", isCorrect: true },
+          { text: "Once a week", isCorrect: false },
+          { text: "Three times a year", isCorrect: false }
+        ]
+      },
+      {
+        id: 2,
+        question: "What tool do we use to trim or cut our dirty and long nails?",
+        translation: "(Alat apa yang kita gunakan untuk memotong kuku yang kotor dan panjang?)",
+        options: [
+          { text: "Toothbrush", isCorrect: false },
+          { text: "Hair comb", isCorrect: false },
+          { text: "Nail clippers", isCorrect: true },
+          { text: "Bath towel", isCorrect: false }
+        ]
+      },
+      {
+        id: 3,
+        question: "When is the most important time to wash our hands with soap?",
+        translation: "(Kapan waktu terpenting untuk mencuci tangan kita menggunakan sabun?)",
+        options: [
+          { text: "Before and after eating", isCorrect: true },
+          { text: "While sleeping in bed", isCorrect: false },
+          { text: "Before taking a bath", isCorrect: false },
+          { text: "After watching television", isCorrect: false }
+        ]
+      },
+      {
+        id: 4,
+        question: "Aisyah wants to wash her hair because it feels dirty. What should she use?",
+        translation: "(Aisyah ingin mencuci rambutnya karena terasa kotor. Apa yang harus ia gunakan?)",
+        options: [
+          { text: "Toothpaste", isCorrect: false },
+          { text: "Shampoo", isCorrect: true },
+          { text: "Hand sanitizer", isCorrect: false },
+          { text: "Body lotion", isCorrect: false }
+        ]
+      },
+      {
+        id: 5,
+        question: "What should you use to dry your body after taking a shower?",
+        translation: "(Apa yang harus kamu gunakan untuk mengeringkan tubuh setelah mandi?)",
+        options: [
+          { text: "A dirty t-shirt", isCorrect: false },
+          { text: "A dry and clean towel", isCorrect: true },
+          { text: "A wet sponge", isCorrect: false },
+          { text: "A plastic bag", isCorrect: false }
+        ]
+      },
+      {
+        id: 6,
+        question: "Doni plays football on a dusty field. What should he do immediately after arriving home?",
+        translation: "(Doni bermain sepak bola di lapangan berdebu. Apa yang harus segera ia lakukan setelah tiba di rumah?)",
+        options: [
+          { text: "Go straight to sleep without washing", isCorrect: false },
+          { text: "Take a bath and change into clean clothes", isCorrect: true },
+          { text: "Comb his hair without taking a shower", isCorrect: false },
+          { text: "Eat snacks with dusty hands", isCorrect: false }
+        ]
+      },
+      {
+        id: 7,
+        question: "Which of the following is an example of poor hygiene habit?",
+        translation: "(Manakah dari pilihan berikut yang merupakan contoh kebiasaan kebersihan yang buruk?)",
+        options: [
+          { text: "Washing hands after using the toilet", isCorrect: false },
+          { text: "Wearing dirty clothes for several days", isCorrect: true },
+          { text: "Brushing teeth before going to bed", isCorrect: false },
+          { text: "Cutting long fingernails regularly", isCorrect: false }
+        ]
+      },
+      {
+        id: 8,
+        question: "Why is practicing personal hygiene very important for us?",
+        translation: "(Mengapa mempraktikkan kebersihan diri sangat penting bagi kita?)",
+        options: [
+          { text: "To make us feel sick and tired", isCorrect: false },
+          { text: "To collect bacteria and germs", isCorrect: false },
+          { text: "To keep our bodies healthy and prevent diseases", isCorrect: true },
+          { text: "To spend all of our pocket money", isCorrect: false }
+        ]
+      },
+      {
+        id: 9,
+        question: "What should you do when you cough or sneeze to prevent spreading germs to your friends?",
+        translation: "(Apa yang harus kamu lakukan saat batuk atau bersin untuk mencegah penyebaran kuman kepada teman-temanmu?)",
+        options: [
+          { text: "Cover your mouth and nose with a tissue or upper elbow", isCorrect: true },
+          { text: "Sneeze directly towards your classmates", isCorrect: false },
+          { text: "Rub your dirty hands onto your friends' books", isCorrect: false },
+          { text: "Close your eyes and scream loudly", isCorrect: false }
+        ]
+      },
+      {
+        id: 10,
+        question: "Before going to sleep at night, it is a good hygiene habit to brush our teeth and ...",
+        translation: "(Sebelum tidur di malam hari, kebiasaan kebersihan yang baik adalah menyikat gigi dan ...)",
+        options: [
+          { text: "Eat lots of sweet chocolate candies", isCorrect: false },
+          { text: "Wash our feet and hands thoroughly", isCorrect: true },
+          { text: "Wear muddy sports shoes in bed", isCorrect: false },
+          { text: "Leave dirty dishes on the mattress", isCorrect: false }
+        ]
+      }
+    ];
+
+    // Toggle Vocabulary visibility
+    const toggleVocabBtn = document.getElementById('toggleVocabBtn');
+    const vocabContent = document.getElementById('vocabContent');
+    toggleVocabBtn.addEventListener('click', () => {
+      vocabContent.classList.toggle('hidden');
+    });
+
+    // Render Soal Kuis
+    const container = document.getElementById('questionsContainer');
+    quizData.forEach((q, index) => {
+      const qCard = document.createElement('div');
+      qCard.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-200";
+
+      let optionsHTML = '';
+      q.options.forEach((opt, optIndex) => {
+        optionsHTML += `
+          <label class="flex items-start gap-3 p-3.5 rounded-xl border border-slate-200 hover:bg-teal-50/50 hover:border-teal-300 transition cursor-pointer">
+            <input type="radio" name="q_${q.id}" value="${optIndex}" class="mt-1 accent-teal-600 w-4 h-4">
+            <span class="text-sm font-medium text-slate-700">${opt.text}</span>
+          </label>
+        `;
+      });
+
+      qCard.innerHTML = `
+        <div class="flex items-start gap-3 mb-3">
+          <span class="bg-teal-600 text-white text-xs font-bold px-2.5 py-1 rounded-lg">No. ${index + 1}</span>
+          <div>
+            <h3 class="font-bold text-slate-800 text-base leading-snug">${q.question}</h3>
+            <p class="text-xs text-slate-500 italic mt-0.5">${q.translation}</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-4">
+          ${optionsHTML}
+        </div>
+      `;
+      container.appendChild(qCard);
+    });
+
+    // Event Submit Kuis
+    document.getElementById('submitQuizBtn').addEventListener('click', async () => {
+      const studentName = document.getElementById('studentName').value.trim();
+      const studentClass = document.getElementById('studentClass').value;
+      const warning = document.getElementById('validationWarning');
+
+      // Validasi Identitas
+      if (!studentName || !studentClass) {
+        warning.classList.remove('hidden');
+        warning.textContent = "⚠️ Silakan isi Nama Lengkap dan Kelas terlebih dahulu!";
+        return;
+      }
+
+      // Cek kelengkapan jawaban
+      let allAnswered = true;
+      let correctCount = 0;
+      let studentAnswers = {};
+
+      quizData.forEach(q => {
+        const selected = document.querySelector(`input[name="q_${q.id}"]:checked`);
+        if (!selected) {
+          allAnswered = false;
+        } else {
+          const selectedIdx = parseInt(selected.value);
+          const isCorrect = q.options[selectedIdx].isCorrect;
+          if (isCorrect) correctCount++;
+          studentAnswers[`Q${q.id}`] = {
+            chosen: q.options[selectedIdx].text,
+            isCorrect: isCorrect
+          };
+        }
+      });
+
+      if (!allAnswered) {
+        warning.classList.remove('hidden');
+        warning.textContent = "⚠️ Masih ada pertanyaan yang belum dijawab. Mohon periksa kembali!";
+        return;
+      }
+
+      warning.classList.add('hidden');
+
+      // Hitung Skor (10 soal x 10 poin = Skala 0 - 100)
+      const totalQuestions = quizData.length;
+      const finalScore = Math.round((correctCount / totalQuestions) * 100);
+
+      // Tampilkan hasil di antarmuka
+      const resultCard = document.getElementById('resultCard');
+      const finalScoreDisplay = document.getElementById('finalScoreDisplay');
+      const correctRatioDisplay = document.getElementById('correctRatioDisplay');
+      const resultGreeting = document.getElementById('resultGreeting');
+      const statusMessage = document.getElementById('statusMessage');
+
+      resultGreeting.textContent = `Kerja bagus, ${studentName} (${studentClass})!`;
+      finalScoreDisplay.textContent = finalScore;
+      correctRatioDisplay.textContent = `${correctCount} dari ${totalQuestions} soal terjawab dengan benar`;
+      resultCard.classList.remove('hidden');
+      resultCard.scrollIntoView({ behavior: 'smooth' });
+
+      // Disable tombol agar tidak double submit
+      const submitBtn = document.getElementById('submitQuizBtn');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+      // Payload untuk dikirim ke Google Apps Script
+      const payload = {
+        studentName: studentName,
+        studentClass: studentClass,
+        score: finalScore,
+        correctCount: correctCount,
+        totalQuestions: totalQuestions,
+        answers: studentAnswers
+      };
+
+      const targetScriptUrl = getActiveScriptUrl();
+
+      // Kirim data ke Apps Script via POST jika URL valid
+      if (isValidScriptUrl(targetScriptUrl)) {
+        try {
+          statusMessage.innerHTML = "⏳ Sedang merekap nilai ke lembar tugas guru...";
+          
+          await fetch(targetScriptUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          statusMessage.innerHTML = "<span class='text-emerald-600 font-bold'>✅ Nilai dan jawaban Anda telah berhasil direkam oleh guru!</span>";
+        } catch (err) {
+          console.error("Gagal mengirim ke Google Sheets:", err);
+          statusMessage.innerHTML = "<span class='text-emerald-600 font-bold'>✅ Jawaban selesai dihitung. Nilai Anda: " + finalScore + "</span>";
+        }
+      } else {
+        // Tampilan bersih bagi siswa jika guru belum menyambungkan spreadsheet
+        statusMessage.innerHTML = "<span class='text-emerald-600 font-bold'>✅ Kuis telah selesai. Jawaban Anda berhasil dinilai!</span>";
+      }
+    });
+  </script>
+</body>
+</html>
